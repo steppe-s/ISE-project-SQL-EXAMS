@@ -1,0 +1,40 @@
+# Feedback Chris 
+# Notulen 5/6/2020
+
+## DEZE WEEK IPV INVULLEN 
+
+## Algemeen ->
+- Toetssysteem of een oefensysteem 
+- Toelichting over het wanneer je vragen moet nakijken
+
+## BPMN -> 
+- Input voor het process wat die moet nakijken er komt niks binnen -> Vanuit het systeem!
+- Toelichting voor het nakijken van de syntax
+
+## Use case model ->
+- Is de student een student die een toets mag doen? -> Inlog use case 
+- Fully dressed use cases zijn niet fully dressed -> fully dressed maken? 
+
+## Verbalizatie van feiten ->
+- DDL-script voor vraag etc.. -> primary key voor de script worden een titel zoals MuziekDatabaseExtended/AdventureWork etc.
+- Herhaling had Steppe al opgelost?
+
+## CDM -> 
+- Weinig van een toets opgeslagen -> Welke course/Welke uitvoering? 
+- Chris -> Notities gemaakt? -> Notitie kolom?
+- **Resultset opslaan bij correcte antwoorden**
+
+## Requirements ->
+- Leerling kan geen eigen set kiezen -> Functional requitement 
+- Leering kan alleen selects uitvoeren -> Constraint 
+- Zelf even kijken
+
+
+## CRUD matrix 
+- Geen tabellen -> latere matrix 
+- Andere vernaming
+- Conceptueel maken 
+
+## Vraag aan Marco -> 
+- Wil die iets anders van een cijfer opslaan?
+

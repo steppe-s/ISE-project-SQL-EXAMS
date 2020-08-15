@@ -1,0 +1,304 @@
+Changed database context to 'HAN_SQL_EXAM_DATABASE'.
+
+(6 rows affected)
+Checking identity information: current identity value '769'.
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+Checking identity information: current identity value '769'.
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+                                                              
+--------------------------------------------------------------
+1:DEA1:1                                                      
+                                                              
+--------------------------------------------------------------
+2:DEA1:1                                                      
+                                                              
+--------------------------------------------------------------
+3:DEA1:1                                                      
+student_no  exam_id              question_no reason_no   answer                                                                                                                                                                                                                                                           answer_status                                      answer_fill_in_date    
+----------- -------------------- ----------- ----------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------- -----------------------
+          1 DEA1                           1        NULL SELECT * FROM componist                                                                                                                                                                                                                                          PENDING                                            2020-06-15 14:14:16.330
+          1 DEA1                           2       60111 SELECT * FROM                                                                                                                                                                                                                                                    INCORRECT                                          2020-06-15 14:14:16.343
+          1 DEA1                           3       60110 NULL                                                                                                                                                                                                                                                             INCORRECT                                          2020-06-15 14:14:16.357
+          2 DEA1                           1        NULL SELECT * FROM componist c                                                                                                                                                                                                                                        REQUIRE CHECK                                      2020-06-15 14:14:16.307
+reason_no   reason_description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+----------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      60111 Answer uses an illicit word                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+      60110 No answer was provided by the student                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HAN_SQL_EXAM_DATABASE.dbo.sp_executesql N'SELECT student_no, exam_id, question_no, reason_no, answer, answer_rating, answer_fill_in_date FROM answer'                                                                                                           
+                                                                                                                                                                                                                                                                
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HAN_SQL_EXAM_DATABASE.dbo.sp_executesql N'SELECT question_no FROM answer'                                                                                                                                                                                       
+question_no
+-----------
+          1
+                                                                                                                                                                                                                                                                
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HAN_SQL_EXAM_DATABASE.dbo.sp_executesql N'SELECT * FROM answer'                                                                                                                                                                                                 
+student_no  exam_id              question_no reason_no   answer                                                                                                                                                                                                                                                           answer_status                                      answer_fill_in_date    
+----------- -------------------- ----------- ----------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------- -----------------------
+          3 DB-1                           1        NULL SELECT * FROM answer                                                                                                                                                                                                                                             NULL                                                                  NULL
+                                                                                                                                                                                                                                                                
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HAN_SQL_EXAM_DATABASE.dbo.sp_executesql N'SELLECT student_no, exam_id, question_no, reason_no, answer, answer_rating, answer_fill_in_date FROM answer'                                                                                                          
+SQLServerAgent is not currently running so it cannot be notified of this action.
+answer                                                                                                                                                                                                                                                           reason_description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               student_no  exam_id              question_no
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----------- -------------------- -----------
+To set one of these question to correct the stored procedure pr_set_pending_correct_answer_to_true or 
+			pr_set_pending_correct_answer_to_false. 
+			This stored procedure expects three parameters the student_on, exam_id and question_no. These are the last three columns of the result set of this stored procedure
+A non-executable statement
+A non-executable statement
+                                                                                                                                                                                                                                                                
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HAN_SQL_EXAM_DATABASE.dbo.sp_executesql N'A non-executable statement'                                                                                                                                                                                           
+ 
++----------------------+
+|Test Execution Summary|
++----------------------+
+ 
+|No |Test Case Name                                                                                                                                     |Dur(ms)|Result |
++---+---------------------------------------------------------------------------------------------------------------------------------------------------+-------+-------+
+|1  |[pr_insert_class].[test_if_pr_inserts_correct_record]                                                                                              |     16|Success|
+|2  |[pr_insert_class].[test_if_pr_throws_when_group_id_is_null]                                                                                        |      7|Success|
+|3  |[pr_update_student].[test_if_pr_insert_throws_class_id_cannot_be_null]                                                                             |      7|Success|
+|4  |[pr_update_student].[test_if_pr_insert_throws_first_name_cannot_be_null]                                                                           |      6|Success|
+|5  |[pr_update_student].[test_if_pr_insert_throws_is_dyslexic_cannot_be_null]                                                                          |      6|Success|
+|6  |[pr_update_student].[test_if_pr_insert_throws_last_name_cannot_be_null]                                                                            |      7|Success|
+|7  |[pr_update_student].[test_if_pr_insert_throws_student_no_cannot_be_null]                                                                           |      7|Success|
+|8  |[pr_update_student].[test_if_pr_update_correct_record]                                                                                             |     20|Success|
+|9  |[test_integration_create_exam].[test if create_exam_proces_works]                                                                                  |    173|Success|
+|10 |[test_integration_execute_exam].[test if integration is succesfull]                                                                                |    103|Success|
+|11 |[test_pr_add_student_to_exam].[test if add_student_to_exam adds student to right exam]                                                             |    120|Success|
+|12 |[test_pr_add_student_to_exam].[test if add_student_to_exam throws exam group has not been created yet for this exam]                               |     14|Success|
+|13 |[test_pr_add_student_to_exam].[test if add_student_to_exam throws exam_group_type cannot be null]                                                  |      3|Success|
+|14 |[test_pr_add_student_to_exam].[test if add_student_to_exam throws exam_id cannot be null]                                                          |      3|Success|
+|15 |[test_pr_add_student_to_exam].[test if add_student_to_exam throws student_no cannot be null]                                                       |      4|Success|
+|16 |[test_pr_add_student_to_exam].[test if add_student_to_exam throws you cannot assign a student to an exam that has taken place already]             |     20|Success|
+|17 |[test_pr_check_answer].[test_if_pr_check_answer_different_solution]                                                                                |     23|Success|
+|18 |[test_pr_check_answer].[test_if_pr_check_answer_incorrect_columns]                                                                                 |     27|Success|
+|19 |[test_pr_check_answer].[test_if_pr_check_answer_incorrect_rows]                                                                                    |     27|Success|
+|20 |[test_pr_check_answer].[test_if_pr_check_answer_no_database]                                                                                       |      4|Success|
+|21 |[test_pr_check_answer].[test_if_pr_check_answer_string_compare]                                                                                    |     20|Success|
+|22 |[test_pr_check_answer].[test_if_pr_check_answer_syntax_incorrect]                                                                                  |     47|Success|
+|23 |[test_pr_check_answer].[test_if_pr_check_answer_throws_Answer_does_not_include_the_required_statements]                                            |     50|Success|
+|24 |[test_pr_check_answer].[test_if_pr_check_answer_throws_answer_uses_an_illicit_word]                                                                |     24|Success|
+|25 |[test_pr_connect_question_to_exam].[test if connect_question_to_exam adds question to exam]                                                        |     13|Success|
+|26 |[test_pr_connect_question_to_exam].[test if connect_question_to_exam throws exam_id cannot be null]                                                |      0|Success|
+|27 |[test_pr_connect_question_to_exam].[test if connect_question_to_exam throws question cannot be added to exam]                                      |     40|Success|
+|28 |[test_pr_connect_question_to_exam].[test if connect_question_to_exam throws question_no cannot be null]                                            |      3|Success|
+|29 |[test_pr_connect_question_to_exam].[test if connect_question_to_exam throws question_points cannot be null]                                        |      3|Success|
+|30 |[test_pr_connect_question_to_exam].[test_if_status_is_updated_in_question_table]                                                                   |     40|Success|
+|31 |[test_pr_delete_answer_criteria].[test_if_pr_delete_correct_record]                                                                                |     43|Success|
+|32 |[test_pr_delete_answer_criteria].[test_if_pr_throws_when_keyword_is_null]                                                                          |      3|Success|
+|33 |[test_pr_delete_answer_criteria].[test_if_pr_throws_when_question_no_is_null]                                                                      |      4|Success|
+|34 |[test_pr_delete_correct_answer].[test if delete_correct_answer deletes correct record]                                                             |     20|Success|
+|35 |[test_pr_delete_correct_answer].[test if delete_correct_answer throws at least one correct question must be provided]                              |     33|Success|
+|36 |[test_pr_delete_correct_answer].[test if delete_correct_answer throws correct_answer_id cannot be null]                                            |      0|Success|
+|37 |[test_pr_delete_correct_answer].[test if delete_correct_answer throws question_no cannot be null]                                                  |      3|Success|
+|38 |[test_pr_delete_exam].[test if correct exam is deleted]                                                                                            |     23|Success|
+|39 |[test_pr_delete_exam].[test if delete_exam throws exam may not be modified]                                                                        |     10|Success|
+|40 |[test_pr_delete_exam].[test if delete_exam throws exam_id cannot be null]                                                                          |      3|Success|
+|41 |[test_pr_delete_question].[test if delete_question deletes question when not in use]                                                               |     10|Success|
+|42 |[test_pr_delete_question].[test if delete_question throws question_no cannot be null]                                                              |      0|Success|
+|43 |[test_pr_delete_question].[test if delete_question updates status to deleted]                                                                      |     36|Success|
+|44 |[test_pr_disconnect_question_from_exam].[test_if_pr_deletes_correct_record]                                                                        |     30|Success|
+|45 |[test_pr_disconnect_question_from_exam].[test_if_pr_throws_when_exam_id_is_null]                                                                   |      0|Success|
+|46 |[test_pr_disconnect_question_from_exam].[test_if_pr_throws_when_question_no_is_null]                                                               |      3|Success|
+|47 |[test_pr_disconnect_question_from_exam].[test_if_pr_throws_when_trying_to_disconnect_from_taken_exam]                                              |     17|Success|
+|48 |[test_pr_disconnect_question_from_exam].[test_if_status_is_updated_in_question_table]                                                              |     33|Success|
+|49 |[test_pr_drop_ddl].[test if pr_drop_ddl throws exam_db_name cannot be null]                                                                        |      3|Success|
+|50 |[test_pr_drop_ddl].[test if pr_drop_ddl throws provided database does not exist]                                                                   |      3|Success|
+|51 |[test_pr_drop_exam_database_population].[test if drop_exam_database_population throws exam_db_name cannot be null]                                 |      4|Success|
+|52 |[test_pr_drop_exam_database_population].[test if drop_exam_database_population throws provided database name does not exist]                       |      6|Success|
+|53 |[test_pr_execute_ddl].[test if pr_execute_ddl throws Database associated with name not found]                                                      |     26|Success|
+|54 |[test_pr_execute_ddl].[test if pr_execute_ddl throws Database required for script is not available]                                                |     14|Success|
+|55 |[test_pr_execute_ddl].[test if pr_execute_ddl throws exam_db_name cannot be null]                                                                  |      3|Success|
+|56 |[test_pr_hand_in_exam].[test if hand_in_exam creates empty answers for student]                                                                    |     44|Success|
+|57 |[test_pr_hand_in_exam].[test if hand_in_exam throws exam_id cannot be null]                                                                        |      3|Success|
+|58 |[test_pr_hand_in_exam].[test if hand_in_exam throws student not signed up for exam]                                                                |      7|Success|
+|59 |[test_pr_hand_in_exam].[test if hand_in_exam throws student_no cannot be null]                                                                     |      3|Success|
+|60 |[test_pr_hand_in_exam].[test if hand_in_exam updates hand_in_date in exam_for_student]                                                             |     44|Success|
+|61 |[test_pr_insert__correct_answer].[test if insert_correct_answer inserts answer]                                                                    |     17|Success|
+|62 |[test_pr_insert__correct_answer].[test if insert_correct_answer sets answer_id to 1]                                                               |     34|Success|
+|63 |[test_pr_insert__correct_answer].[test if insert_correct_answer sets answer_id to 2]                                                               |     10|Success|
+|64 |[test_pr_insert__correct_answer].[test if insert_correct_answer throws correct_answer_statement cannot be null]                                    |      3|Success|
+|65 |[test_pr_insert__correct_answer].[test if insert_correct_answer throws question_no cannot be null]                                                 |      3|Success|
+|66 |[test_pr_insert_all_students_from_a_class_in_exam_for_student].[test_if_pr_inserts_correct_records]                                                |     27|Success|
+|67 |[test_pr_insert_all_students_from_a_class_in_exam_for_student].[test_if_pr_throws_when_class_is_null]                                              |      4|Success|
+|68 |[test_pr_insert_all_students_from_a_class_in_exam_for_student].[test_if_pr_throws_when_exam_id_is_null]                                            |      0|Success|
+|69 |[test_pr_insert_answer].[test_if_pr_inserts_correct_answer]                                                                                        |     23|Success|
+|70 |[test_pr_insert_answer].[test_if_pr_throws_when_answer_is_null]                                                                                    |      0|Success|
+|71 |[test_pr_insert_answer].[test_if_pr_throws_when_exam_id_is_null]                                                                                   |      0|Success|
+|72 |[test_pr_insert_answer].[test_if_pr_throws_when_question_no_is_null]                                                                               |      0|Success|
+|73 |[test_pr_insert_answer].[test_if_pr_throws_when_student_no_is_null]                                                                                |      0|Success|
+|74 |[test_pr_insert_answer].[test_if_pr_throws_when_trying_to_insert_after_end_date]                                                                   |     20|Success|
+|75 |[test_pr_insert_answer].[test_if_pr_throws_when_trying_to_insert_before_begin_date]                                                                |     16|Success|
+|76 |[test_pr_insert_answer_criteria].[test_if_pr_inserts_correct_record]                                                                               |     16|Success|
+|77 |[test_pr_insert_answer_criteria].[test_if_pr_throws_when_criteria_type_is_null]                                                                    |      6|Success|
+|78 |[test_pr_insert_answer_criteria].[test_if_pr_throws_when_keyword_is_null]                                                                          |      7|Success|
+|79 |[test_pr_insert_answer_criteria].[test_if_pr_throws_when_question_no_is_null]                                                                      |      7|Success|
+|80 |[test_pr_insert_exam].[test_if_pr_inserts_correct_record]                                                                                          |     34|Success|
+|81 |[test_pr_insert_exam].[test_if_pr_inserts_when_comment_is_null]                                                                                    |     30|Success|
+|82 |[test_pr_insert_exam].[test_if_pr_inserts_when_starting_date_is_further_than_current]                                                              |      7|Success|
+|83 |[test_pr_insert_exam].[test_if_pr_throws_when_course_id_is_null]                                                                                   |      6|Success|
+|84 |[test_pr_insert_exam].[test_if_pr_throws_when_exam_id_is_null]                                                                                     |      3|Success|
+|85 |[test_pr_insert_exam].[test_if_pr_throws_when_exam_name_is_null]                                                                                   |     30|Success|
+|86 |[test_pr_insert_exam].[test_if_pr_throws_when_starting_date_is_in_the_past]                                                                        |      7|Success|
+|87 |[test_pr_insert_exam].[test_if_pr_throws_when_starting_date_is_null]                                                                               |      4|Success|
+|88 |[test_pr_insert_exam_database].[test if insert_exam_database inserts exam_database]                                                                |      3|Success|
+|89 |[test_pr_insert_exam_database].[test if insert_exam_database throws exam_db_name cannot be null]                                                   |      0|Success|
+|90 |[test_pr_insert_exam_database].[test if insert_exam_database throws exam_ddl_script cannot be null]                                                |      3|Success|
+|91 |[test_pr_insert_exam_database].[test if insert_exam_database throws exam_dml_script cannot be null]                                                |      0|Success|
+|92 |[test_pr_insert_exam_group].[test_if_pr_inserts_correct_record]                                                                                    |     14|Success|
+|93 |[test_pr_insert_exam_group].[test_if_pr_throws_when_group_id_is_null]                                                                              |      3|Success|
+|94 |[test_pr_insert_question].[test if insert_question calls pr_insert_correct_answer with question_no 1]                                              |     43|Success|
+|95 |[test_pr_insert_question].[test if upload_question throws correct_answer cannot be null]                                                           |      0|Success|
+|96 |[test_pr_insert_question].[test if upload_question throws db_name cannot be null]                                                                  |      3|Success|
+|97 |[test_pr_insert_question].[test if upload_question throws difficulty cannot be null]                                                               |      3|Success|
+|98 |[test_pr_insert_question].[test if upload_question throws exam_id cannot be null]                                                                  |      4|Success|
+|99 |[test_pr_insert_question].[test if upload_question throws question_assignment cannot be null]                                                      |      0|Success|
+|100|[test_pr_insert_question].[test if upload_question throws question_points cannot cannot be null or 0]                                              |      0|Success|
+|101|[test_pr_insert_stand_alone_question].[test if insert_question calls pr_insert_correct_answer with question_no 1]                                  |     90|Success|
+|102|[test_pr_insert_stand_alone_question].[test if upload_question throws correct_answer cannot be null]                                               |      0|Success|
+|103|[test_pr_insert_stand_alone_question].[test if upload_question throws db_name cannot be null]                                                      |      0|Success|
+|104|[test_pr_insert_stand_alone_question].[test if upload_question throws difficulty cannot be null]                                                   |      0|Success|
+|105|[test_pr_insert_stand_alone_question].[test if upload_question throws question_assignment cannot be null]                                          |      0|Success|
+|106|[test_pr_insert_stand_alone_question].[test_if_pr_inserts_correct_record_in_CORRECT_ANSWER]                                                        |     26|Success|
+|107|[test_pr_insert_stand_alone_question].[test_if_pr_inserts_correct_record_in_QUESTION]                                                              |     60|Success|
+|108|[test_pr_insert_student].[test_if_pr_inserts_correct_record]                                                                                       |     20|Success|
+|109|[test_pr_insert_student].[test_if_pr_throws_when_class_is_null]                                                                                    |      6|Success|
+|110|[test_pr_insert_student].[test_if_pr_throws_when_first_name_is_null]                                                                               |     10|Success|
+|111|[test_pr_insert_student].[test_if_pr_throws_when_is_dyslexic_is_null]                                                                              |      7|Success|
+|112|[test_pr_insert_student].[test_if_pr_throws_when_student_no_is_null]                                                                               |      7|Success|
+|113|[test_pr_remove_student_from_exam].[test if remove_student_from_exam removes student from exam]                                                    |     20|Success|
+|114|[test_pr_remove_student_from_exam].[test if remove_student_from_exam throws exam_id cannot be null]                                                |      0|Success|
+|115|[test_pr_remove_student_from_exam].[test if remove_student_from_exam throws student_no cannot be null]                                             |      0|Success|
+|116|[test_pr_remove_student_from_exam].[test if remove_student_from_exam throws you cannot remove a student from an exam that has taken place already] |      6|Success|
+|117|[test_pr_schedule_exam_job].[test_if_pr_throws_error_exam_id_null]                                                                                 |      0|Success|
+|118|[test_pr_schedule_exam_job].[test_if_pr_throws_error_schedule_date_cannot_be_in_the_past]                                                          |      3|Success|
+|119|[test_pr_schedule_exam_job].[test_if_pr_throws_error_starting_date_cannot_be_null]                                                                 |      3|Success|
+|120|[test_pr_schedule_exam_job].[test_if_pr_throwsno_error]                                                                                            |      7|Success|
+|121|[test_pr_select_all_answers_for_exam].[test if select_all_answers_for_exam selects correct data]                                                   |     24|Success|
+|122|[test_pr_select_all_answers_for_exam].[test if select_all_answers_for_exam throws exam_id cannot be null]                                          |      0|Success|
+|123|[test_pr_select_all_question_assignments_from_exam].[test_if_pr_returns_correct_data]                                                              |     17|Success|
+|124|[test_pr_select_all_question_assignments_from_exam].[test_if_pr_throws_when_exam_id_is_null]                                                       |      3|Success|
+|125|[test_pr_select_answers_for_exam_per_student].[test if select_answers_for_exam returns correct data]                                               |     37|Success|
+|126|[test_pr_select_answers_for_exam_per_student].[test if select_select_answers_for_exam throws exam_id cannot be null]                               |      4|Success|
+|127|[test_pr_select_answers_for_exam_per_student].[test if select_select_answers_for_exam throws student is not signed up for exam]                    |      6|Success|
+|128|[test_pr_select_answers_for_exam_per_student].[test if select_select_answers_for_exam throws student_no cannot be null]                            |      0|Success|
+|129|[test_pr_select_correct_answers_from_question].[test if select_correct_answers_from_question selects correct answers]                              |     13|Success|
+|130|[test_pr_select_correct_answers_from_question].[test if select_correct_answers_from_question throws question_no cannot be null]                    |      0|Success|
+|131|[test_pr_select_pending_correct_answers_for_exam].[test_if_pr_does_not_throw_whith_known_exam_id]                                                  |     10|Success|
+|132|[test_pr_select_pending_correct_answers_for_exam].[test_if_pr_throw_when_exam_id_is_null]                                                          |      3|Success|
+|133|[test_pr_select_questions_in_exam].[test if select_questions_in_exam selects right questions]                                                      |     30|Success|
+|134|[test_pr_select_questions_in_exam].[test if select_questions_in_exam throws exam_id cannot be null]                                                |      3|Success|
+|135|[test_pr_select_results_for_student_answer].[test if select_results_for_student_answer throws database required for question is not available]     |     17|Success|
+|136|[test_pr_select_results_for_student_answer].[test if select_results_for_student_answer throws exam_id cannot be null]                              |      0|Success|
+|137|[test_pr_select_results_for_student_answer].[test if select_results_for_student_answer throws question_no cannot be null]                          |      0|Success|
+|138|[test_pr_select_results_for_student_answer].[test if select_results_for_student_answer throws statement not executable]                            |     20|Success|
+|139|[test_pr_select_results_for_student_answer].[test if select_results_for_student_answer throws student_no cannot be null]                           |      3|Success|
+|140|[test_pr_select_students_from_class].[test_if_pr_does_returns_correct_data]                                                                        |     13|Success|
+|141|[test_pr_select_students_from_class].[test_if_pr_throw_when_class_id_is_null]                                                                      |      0|Success|
+|142|[test_pr_select_students_from_group].[test_if_pr_returns_correct_data]                                                                             |     13|Success|
+|143|[test_pr_select_students_from_group].[test_if_pr_throw_when_group_id_is_null]                                                                      |      4|Success|
+|144|[test_pr_set_pending_correct_answer_to_false].[test if pr throws exam_id cannot be null]                                                           |      0|Success|
+|145|[test_pr_set_pending_correct_answer_to_false].[test if pr throws question_no cannot be null]                                                       |      0|Success|
+|146|[test_pr_set_pending_correct_answer_to_false].[test if pr throws student_no cannot be null]                                                        |      3|Success|
+|147|[test_pr_set_pending_correct_answer_to_false].[test_if_pr_updates_answer_pending_to_false]                                                         |     34|Success|
+|148|[test_pr_set_pending_correct_answer_to_true].[test if pr throws exam_id cannot be null]                                                            |      0|Success|
+|149|[test_pr_set_pending_correct_answer_to_true].[test if pr throws question_no cannot be null]                                                        |      0|Success|
+|150|[test_pr_set_pending_correct_answer_to_true].[test if pr throws student_no cannot be null]                                                         |      3|Success|
+|151|[test_pr_set_pending_correct_answer_to_true].[test_if_pr_inserts_to_CORRECT_ANSWER]                                                                |     27|Success|
+|152|[test_pr_set_pending_correct_answer_to_true].[test_if_pr_updates_answer_pending_to_MOVED_TO_CORRECT_ANSWER]                                        |     40|Success|
+|153|[test_pr_update_answer].[test_if_pr_throws_when_answer_is_null]                                                                                    |      0|Success|
+|154|[test_pr_update_answer].[test_if_pr_throws_when_exam_id_is_null]                                                                                   |      0|Success|
+|155|[test_pr_update_answer].[test_if_pr_throws_when_question_no_is_null]                                                                               |      0|Success|
+|156|[test_pr_update_answer].[test_if_pr_throws_when_student_no_is_null]                                                                                |      0|Success|
+|157|[test_pr_update_answer].[test_if_pr_throws_when_trying_to_insert_after_end_date]                                                                   |     23|Success|
+|158|[test_pr_update_answer].[test_if_pr_throws_when_trying_to_insert_before_begin_date]                                                                |     24|Success|
+|159|[test_pr_update_answer].[test_if_pr_updates_correct_answer]                                                                                        |     27|Success|
+|160|[test_pr_update_answer_criteria].[test_if_pr_throws_when_criteria_type_is_null]                                                                    |      3|Success|
+|161|[test_pr_update_answer_criteria].[test_if_pr_throws_when_keyword_new_is_null]                                                                      |      4|Success|
+|162|[test_pr_update_answer_criteria].[test_if_pr_throws_when_keyword_old_is_null]                                                                      |      3|Success|
+|163|[test_pr_update_answer_criteria].[test_if_pr_throws_when_question_no_is_null]                                                                      |      3|Success|
+|164|[test_pr_update_answer_criteria].[test_if_pr_throws_when_tyring_to_update_keyword_when_exam_has_already_been_taken_place]                          |     54|Success|
+|165|[test_pr_update_answer_criteria].[test_if_pr_updates_criteria_type_correctly]                                                                      |     40|Success|
+|166|[test_pr_update_answer_criteria].[test_if_pr_updates_keyword_correctly]                                                                            |     57|Success|
+|167|[test_pr_update_class].[test_if_pr_insert_throws_class_id_old_cannot_be_null]                                                                      |     30|Success|
+|168|[test_pr_update_class].[test_if_pr_insert_throws_class_name_new_cannot_be_null]                                                                    |      6|Success|
+|169|[test_pr_update_class].[test_if_pr_update_correct_record]                                                                                          |     14|Success|
+|170|[test_pr_update_correct_answer].[test if update_correct_answer throws question_no cannot be null]                                                  |      3|Success|
+|171|[test_pr_update_correct_answer].[test if update_correct_answer updates correct answer]                                                             |     10|Success|
+|172|[test_pr_update_ddl].[test if update ddl throws script <name> does not exists]                                                                     |      6|Success|
+|173|[test_pr_update_ddl].[test if update ddl updates a ddl]                                                                                            |     46|Success|
+|174|[test_pr_update_ddl].[test if update_ddl throws db_name cannot be null]                                                                            |      3|Success|
+|175|[test_pr_update_ddl].[test if update_ddl throws ddl_script cannot be null]                                                                         |      3|Success|
+|176|[test_pr_update_dml].[test if update dml throws script <name> does not exists]                                                                     |     10|Success|
+|177|[test_pr_update_dml].[test if update dml updates a dml]                                                                                            |     20|Success|
+|178|[test_pr_update_dml].[test if update_dml throws db_name cannot be null]                                                                            |      3|Success|
+|179|[test_pr_update_dml].[test if update_dml throws dml_script cannot be null]                                                                         |      0|Success|
+|180|[test_pr_update_exam].[test if update_exam throws course_id cannot be null]                                                                        |      4|Success|
+|181|[test_pr_update_exam].[test if update_exam throws exam may not be modified]                                                                        |     13|Success|
+|182|[test_pr_update_exam].[test if update_exam throws exam_id cannot be null]                                                                          |      0|Success|
+|183|[test_pr_update_exam].[test if update_exam throws exam_name cannot be null]                                                                        |      4|Success|
+|184|[test_pr_update_exam].[test if update_exam throws starting_date cannot be null or lower than date]                                                 |      3|Success|
+|185|[test_pr_update_exam].[test if update_exam updates comment after exam has been taken]                                                              |     13|Success|
+|186|[test_pr_update_exam].[test if update_exam updates exam]                                                                                           |     20|Success|
+|187|[test_pr_update_exam_for_student].[test if update_exam_for_student throws class cannot be null]                                                    |      0|Success|
+|188|[test_pr_update_exam_for_student].[test if update_exam_for_student throws exam_group_type cannot be null]                                          |      0|Success|
+|189|[test_pr_update_exam_for_student].[test if update_exam_for_student throws exam_id cannot be null]                                                  |      3|Success|
+|190|[test_pr_update_exam_for_student].[test if update_exam_for_student throws result cannot be null]                                                   |     13|Success|
+|191|[test_pr_update_exam_for_student].[test if update_exam_for_student throws Student is not signed up for exam]                                       |      7|Success|
+|192|[test_pr_update_exam_for_student].[test if update_exam_for_student throws student_no cannot be null]                                               |      0|Success|
+|193|[test_pr_update_exam_for_student].[test if update_exam_for_student updates exam_for_student]                                                       |     20|Success|
+|194|[test_pr_update_exam_group].[test_if_pr_insert_throws_group_id_new_cannot_be_null]                                                                 |      7|Success|
+|195|[test_pr_update_exam_group].[test_if_pr_insert_throws_group_id_old_cannot_be_null]                                                                 |      7|Success|
+|196|[test_pr_update_exam_group].[test_if_pr_update_correct_record]                                                                                     |     16|Success|
+|197|[test_pr_update_exam_group_in_exam].[test if update_exam_group_in_exam throws end date may not be modified after exam has been taken]              |      0|Success|
+|198|[test_pr_update_exam_group_in_exam].[test if update_exam_group_in_exam throws end_date cannot be null]                                             |      3|Success|
+|199|[test_pr_update_exam_group_in_exam].[test if update_exam_group_in_exam throws exam group has not been created yet for this exam]                   |      7|Success|
+|200|[test_pr_update_exam_group_in_exam].[test if update_exam_group_in_exam throws exam_group_type cannot be null]                                      |      0|Success|
+|201|[test_pr_update_exam_group_in_exam].[test if update_exam_group_in_exam throws exam_id cannot be null]                                              |      0|Success|
+|202|[test_pr_update_exam_group_in_exam].[test if update_exam_group_in_exam updates end_date]                                                           |     16|Success|
+|203|[test_pr_update_question].[test if update_question throws db_name cannot be null]                                                                  |      3|Success|
+|204|[test_pr_update_question].[test if update_question throws difficulty_id cannot be null]                                                            |      3|Success|
+|205|[test_pr_update_question].[test if update_question throws question_assignment cannot be null]                                                      |      0|Success|
+|206|[test_pr_update_question].[test if update_question throws question_no cannot be null]                                                              |      0|Success|
+|207|[test_pr_update_question].[test if update_question throws questions may not be changed after useage]                                               |     23|Success|
+|208|[test_pr_update_question].[test if update_question updates question and keeps comment]                                                             |     23|Success|
+|209|[test_pr_update_question].[test if update_question updates question and removes comment]                                                           |     20|Success|
+|210|[test_pr_update_question].[test if update_question updates question]                                                                               |     24|Success|
+|211|[test_tr_ddl_and_dml_filter].[test_if_tr_correclty_removes_comments_in_ddl_script]                                                                 |     30|Success|
+|212|[test_tr_ddl_and_dml_filter].[test_if_tr_correclty_removes_comments_in_dml_script]                                                                 |     27|Success|
+|213|[test_tr_ddl_and_dml_filter].[test_if_tr_correclty_removes_comments_in_multiple_insert_statements]                                                 |     40|Success|
+|214|[test_tr_ddl_and_dml_filter].[test_if_tr_throw_when_ddl_contains_create_database]                                                                  |      3|Success|
+|215|[test_tr_ddl_and_dml_filter].[test_if_tr_throw_when_ddl_contains_delete]                                                                           |      4|Success|
+|216|[test_tr_ddl_and_dml_filter].[test_if_tr_throw_when_ddl_contains_drop_database]                                                                    |      0|Success|
+|217|[test_tr_ddl_and_dml_filter].[test_if_tr_throw_when_ddl_contains_illegal_comments]                                                                 |      0|Success|
+|218|[test_tr_ddl_and_dml_filter].[test_if_tr_throw_when_ddl_contains_update]                                                                           |      0|Success|
+|219|[test_tr_ddl_and_dml_filter].[test_if_tr_throw_when_ddl_is_empty]                                                                                  |      0|Success|
+|220|[test_tr_ddl_and_dml_filter].[test_if_tr_throw_when_ddl_is_null]                                                                                   |      0|Success|
+|221|[test_tr_ddl_and_dml_filter].[test_if_tr_throw_when_dml_contains_delete]                                                                           |      0|Success|
+|222|[test_tr_ddl_and_dml_filter].[test_if_tr_throw_when_dml_contains_drop_database]                                                                    |      0|Success|
+|223|[test_tr_ddl_and_dml_filter].[test_if_tr_throw_when_dml_contains_illegal_comments]                                                                 |      0|Success|
+|224|[test_tr_ddl_and_dml_filter].[test_if_tr_throw_when_dml_contains_update]                                                                           |      0|Success|
+|225|[test_tr_ddl_and_dml_filter].[test_if_tr_throw_when_dml_is_empty]                                                                                  |      0|Success|
+|226|[test_tr_ddl_and_dml_filter].[test_if_tr_throw_when_dml_is_null]                                                                                   |      3|Success|
+|227|[test_tr_end_date_is_after_starting_date].[test if tr throws when trying to insert an end date which is before starting date]                      |     20|Success|
+|228|[test_tr_end_date_is_after_starting_date].[test if you can correctly insert multiple rows if end date is after starting time]                      |     20|Success|
+|229|[test_tr_fill_in_date_of_answer_between_starting_and_end_date_of_exam].[test if tr allows insert if fill in date is between starting and end date] |     37|Success|
+|230|[test_tr_fill_in_date_of_answer_between_starting_and_end_date_of_exam].[test if tr can handle multiple records]                                    |     60|Success|
+|231|[test_tr_fill_in_date_of_answer_between_starting_and_end_date_of_exam].[test if tr throws when trying to submit an answer before the starting date]|     37|Success|
+|232|[test_tr_restrict_update_begin_and_end_time_after_exam_has_been_taken].[test_if_tr_allows_updates_on_end_date_of_future_exams]                     |     53|Success|
+|233|[test_tr_restrict_update_begin_and_end_time_after_exam_has_been_taken].[test_if_tr_allows_updates_on_exam_group_id]                                |     23|Success|
+|234|[test_tr_restrict_update_begin_and_end_time_after_exam_has_been_taken].[test_if_tr_allows_updates_on_exam_id]                                      |     84|Success|
+|235|[test_tr_restrict_update_begin_and_end_time_after_exam_has_been_taken].[test_if_tr_can_handle_multiple_statements]                                 |     16|Success|
+|236|[test_tr_restrict_update_begin_and_end_time_after_exam_has_been_taken].[test_if_tr_throws_when_trying_to_update_end_date_of_taken_exam]            |     13|Success|
+|237|[test_tr_set_question_to_pending].[test_if_trigger_correctly_does_not_set_for_false_questions]                                                     |     27|Success|
+|238|[test_tr_set_question_to_pending].[test_if_trigger_correctly_sets_queue]                                                                           |     30|Success|
+|239|[test_tr_set_question_to_pending].[test_if_trigger_correctly_sets_queue_with_multiple_inserts]                                                     |     40|Success|
+---------------------------------------------------------------------------------
+Test Case Summary: 239 test case(s) executed, 239 succeeded, 0 failed, 0 errored.
+---------------------------------------------------------------------------------

@@ -1,0 +1,8 @@
+starlette
+mock
+fastapi
+uvicorn
+pyodbc
+pymongo
+requests
+dnspython

@@ -1,0 +1,32 @@
+Begeleider
+    niet geheel duidelijk of systeem oefen of examen systeem is.
+    toelichten wat het doel is van het systeem toetsen/studenten hulpmiddel
+    BPMN model:
+        fig 1
+        nakijken antwoorden wat moet worden nagekeken?
+        Test is open -> toets is open
+        fig 2
+        Lane teacher controleren antwoorden onduidelijk
+    USE CASE model
+        student kan maar een ding: Vraag beantwoorden. inloggen moet er misschien ook bij. meer dan wij kennen u kom maar binnen.
+        fully dressed is misschien niet nodig
+    Facts
+        DDL en DML wordt bij elke vraag opgeslagen. Database los koppelen met naam.
+    CDM
+        Bij sets meer info opslaan: naam, course, course versie.
+        Bij nakijken bij elk antwoord het goeie antwoord uitvoeren is erg duur.
+        misschien resultset opslaan zodat nakijken sneller kan.
+    Non functionals
+        NFR1 functional?
+        NFR4 functional?
+        NFR5 constraint?
+        NFR6 sql injection is niet het enige.
+    CRUD matrix
+        fig 5 geen tablenames en moeten entities zijn.
+
+IPV niet plaatsgevonden, deze week doen (week 3).
+
+Gesprekken met marco
+    Meer vragen
+    Meer met eigen voorstellen komen.
+

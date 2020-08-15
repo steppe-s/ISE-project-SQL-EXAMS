@@ -1,0 +1,33 @@
+Feedback van Chris en Marco na assessment
+
+TODO
+* Maak een stored procedure die een vraag aan kan maken die niet is gekoppeld
+* Waar haken de alternative flows op in in de USE CASE MODELS
+* Voeg kruisverwijzingen toe naar waar ze aan gelinkt zijn/ of verwijderen de duplicate requirements
+* Verifieer de functional requirements -> Verbeter NFR1
+* Functioneel ontwerp -> mongoDB staging aan toevoegen 
+* EXAM PK -> Exam_name, Course, Date
+* EXAM_GROUP_IN_EXAM -> begin date naar EXAM 
+* Check if id's are redundant
+* Domains -> Domains concepten
+* BR -> bevat procedures ipv BR. 
+* Voeg rollen toe aan het FO/TO?
+* CRUD-MATRIX updaten 
+* Geneer PDM met mijn instellingen (Justin)
+* Beslissingen van de Python API opnemen
+* Schrijf de structuur van de MongoDB op
+* TO -> Architecturele keuzes beter beargementeren. (Gebruik van API komt uit de lucht vallen in het TO) -> creeer een koppeling tussen FO en TO -> door in het TO te verwoorden waarom welke keuzes. 
+
+** BELANRIJKE WENS MULTIPLE DATASETS PER DATABASE!!! ** 
+
+Vragen 
+Hoe kunnen we de BPMN modellen verbeteren -> echte bedrijf processen maken? 
+											Systeem een black box?
+											
+
+Beoordeling 
+FO -> Voldoende tot Matig (6 á 7) -> Sommige dubbele dingen
+TO -> (6) -> Veel meer erin documenteren -> Fouten
+Implementatie (7 á 8) -> Maak het mooi af (8 á 9) -> Relatief eenvoudige tests -> Moet complexer
+Overall -> Ruim voldoende (7)
+

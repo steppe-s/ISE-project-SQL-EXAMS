@@ -1,0 +1,6 @@
+nl\han\ise\REPOSITORY\PropertiesLoader.class
+nl\han\ise\SERVICES\CijferService.class
+nl\han\ise\CONTROLLERS\CijferController.class
+nl\han\ise\DTO\CijferlijstDTO.class
+nl\han\ise\DTO\CijferDTO.class
+nl\han\ise\DAO\CijferDAO.class
